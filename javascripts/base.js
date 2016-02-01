@@ -14,46 +14,6 @@ $(function() {
 
 
 
-    // Slideshow
-    var slidePos = 0;
-    var slideAuto = null;
-
-    var clTT = '.top-tab';
-    var clTTLink = clTT + '__link';
-    var clTTLinkA = clTTLink + '--active';
-    var idTTUl = '#' + clTT.substr(1) + '__ul';
-
-    var clHBg = 'header--bg_';
-
-    function sliderInterval() {
-
-        slideAuto = setInterval(function(){
-
-            slidePos = (slidePos + 1) > 3 ? 0 : (slidePos + 1);
-
-            $('.header').removeClassWild(clHBg + '*').addClass(clHBg + (slidePos + 1));
-
-            $(idTTUl).find(clTTLinkA).removeClass(clTTLinkA.substr(1)).closest(idTTUl).children().eq(slidePos).children().addClass(clTTLinkA.substr(1));
-
-        }, 10000);
-    }
-
-    $(document).ready(sliderInterval);
-
-    $(clTTLink).click(function(){
-
-        clearInterval(slideAuto);
-
-        slidePos = $(this).parent().index();
-
-        $(this).closest('.header').removeClassWild(clHBg + '*').addClass(clHBg + (slidePos + 1));
-
-        $(idTTUl).find(clTTLinkA).removeClass(clTTLinkA.substr(1));
-        $(this).addClass(clTTLinkA.substr(1));
-
-        sliderInterval();
-    });
-
     // Active Spy Scroll (module/navi)
     inScrolling = false;
 
