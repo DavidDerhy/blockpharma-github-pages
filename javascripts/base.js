@@ -1,7 +1,7 @@
-(function() {
+$(function() {
 
     $(window).load(function(){
-       $('.preloader').fadeOut(400);
+       $('.preloader').fadeOut(500);
     });
 
 
