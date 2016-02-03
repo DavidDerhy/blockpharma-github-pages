@@ -1,0 +1,22 @@
+.informations {
+    position: relative;
+    top: -174px;
+    left: 123px;
+}
+
+p {
+  font-family: PFDinTextPro,Arial,Helvetica,sans-serif;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.listing-name, h4, p {
+  padding-top: 20px;
+}
+
+.box__row {
+    max-width: 960px;
+    padding: 0 15px;
+    margin: -80px auto;
+    position: relative;
+}

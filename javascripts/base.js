@@ -41,4 +41,14 @@ $(function() {
             }
         }
     });
+
+ $(".boite").on('mouseenter', function() {
+      $(this).removeClass('dezoom');
+      $(this).addClass('zoom');
+    });
+    $(" .boite").on('mouseleave', function() {
+      $(this).removeClass('zoom');
+      $(this).addClass('dezoom');
+      });
 });
+

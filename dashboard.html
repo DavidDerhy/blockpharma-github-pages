@@ -1,0 +1,230 @@
+<meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<body class="app signed-in accounts show" data-controller-name="accounts" data-action-name="show" data-view-name="Coinbase.Views.Accounts.Show" data-load-olark="true" data-account-id="56acbfa923595a1e7f000211" cz-shortcut-listen="true">
+
+<div class="page-container">
+  <div class="navbar navbar-static-top">
+  <div class="navbar-inner">
+  <div class="container">
+  <a id="main_nav_btn" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  </a>
+  <a href="/accounts/primary" class="brand" onclick=""><img alt="Coinbase" src="img/logo2.png"></a>
+  <div class="nav-collapse" id="application_menu">
+  <ul class="nav clearfix">
+    <li class="top-balance">Aide</li>
+  </ul>
+  <ul class="nav clearfix">
+    <li class="dropdown dropdown-hover" id="user_menu">
+    <a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+      <img width="30" height="30" id="navbar_profile_image" class="avatar visible" src="https://images.coinbase.com/avatar?h=wRPW8DPaYV7kA3dN1K0iJC14mH9uqiLcrbKbOwCFROtZ2qQHq%2FOn0NwT6nUP%0AwNmv&amp;s=150" alt="Avatar?h=wrpw8dpayv7ka3dn1k0ijc14mh9uqilcrbkbowcfrotz2qqhq%2fon0nwt6nup%0awnmv&amp;s=150">
+      <span>Sanofi</span>
+      <b class="caret"></b>
+    </a>
+    </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<div class="container" id="page">
+    <div class="row">
+      <div id="sidebar" class="span3">
+        <ul class="nav nav-list" id="wallet_menu">
+          <li data-controller-names="buys,sells" data-action-names="index">
+        <a href="production.html"><i class="fa fa-medkit"></i>Production en cours</a>
+        </li>
+        <li data-controller-names="send_and_request" data-action-names="">
+        <a href="/send?account_id=56acbfa923595a1e7f000211"><i class="fa fa-truck"></i></i>Suivi de l'acheminement</a>
+        </li>
+        <li data-controller-names="accounts" data-action-names="index">
+        <a href="/accounts"><i class="fa fa-exchange"></i> Effectuer un rappel de lot</a>
+        </li>
+        <li data-controller-names="accounts" data-action-names="index">
+        <a href="/accounts"><i class="fa fa-bell"></i> Alertes</a>
+        </li>
+        <li data-controller-names="accounts" data-action-names="index">
+        <a href="/accounts"><i class="fa fa-pencil-square-o"></i> Gestion des médicaments</a>
+        </li>
+        <li data-controller-names="settings,payment_methods,security_settings" data-action-names="" class="no-border">
+        <a href="/settings"><i class="icon-cog"></i> Paramètres</a>
+        </li>
+        <li class="mobile">
+        </ul>
+      </div>
+      <div class="span9 accounts" id="main" data-account-id="56acbfa923595a1e7f000211">
+        <header class="main-header clearfix">
+        <div class="actions">
+        <div class="info-toggle">
+        <a href="#" class="muted get_btc_address" id="get_btc_address_56acbfa923595a1e7f000211" data-id="56acbfa923595a1e7f000211">
+        <i class="fa fa-info-circle"></i>
+          Adresse du portefeuille
+        </a> </div>
+        </div>
+        </header>
+        <div class="snd-header">
+        <h3>Médicaments</h3>
+        <div class="transaction-search">
+        <i class="fa fa-search"></i>
+        <form action="/accounts/56acbfa923595a1e7f000211/load" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+        <input type="text" name="query" id="transaction_query" placeholder=" Rechercher" tabindex="1" maxlength="50">
+        </form> <a class="clear muted"><i class="icon-cancel"></i></a>
+        </div>
+        </div>
+
+        <div class="liste-medicaments">
+
+          <div class="row">
+            <div class="col-lg-4 container-boite">
+              <a href=""data-toggle="modal" data-target="#myModal"><img src="img/doliprane.jpg" class="boite" alt=""></a>
+            </div>
+
+              <div class="col-lg-4 container-boite">
+                <a href=""data-toggle="modal" data-target="#myModal"><img src="img/doliprane2.jpg" class="boite" alt=""></a>
+              </div>
+
+
+              <div class="col-lg-4 container-boite">
+                <a href=""data-toggle="modal" data-target="#myModal"><img src="img/doliprane3.jpg" class="boite" alt=""></a>
+              </div>
+
+              <div class="col-lg-4 container-boite">
+                <a href=""data-toggle="modal" data-target="#myModal"><img src="img/doliprane4.png" class="boite" alt=""></a>
+              </div>
+
+
+              <div class="col-lg-4 container-boite">
+              <a href=""data-toggle="modal" data-target="#myModal"><img src="img/doliallergie.jpg" class="boite" alt=""></a>
+              </div>
+
+              <div class="col-lg-4 container-boite">
+                <a href=""data-toggle="modal" data-target="#myModal"><img src="img/dolirhume.jpg" class="boite" alt=""></a>
+              </div>
+
+          </div>
+        </div>
+</div>
+
+</div>
+
+ <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Lancer une production</h4>
+      </div>
+      <div class="modal-body">
+
+
+<label for="quantity">Quantités à produire</label>
+<div class="input-group">
+  <input type="text" class="form-control" id="quantity" aria-describedby="basic-addon3">
+</div>
+<label for="lot">Numéro de lot</label>
+<div class="input-group">
+  <input type="text" class="form-control" id="lot" aria-describedby="basic-addon3">
+</div>
+<label for="date">Date de péremption</label>
+<div class="input-group">
+  <input type="date" class="form-control" id="date" aria-describedby="basic-addon3">
+</div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        <a href="launchproduction.html">
+          <button type="button" class="btn btn-primary">Imprimer les identifiants</button>
+        </a>
+      </div>
+
+  </div>
+</div>
+
+
+
+<footer>
+<div class="container">
+<div class="row-fluid">
+<div class="span2 footer__logo">
+<a href="/accounts/primary" class="brand"><img alt="Coinbase" src="img/logo3.png"></a>
+<small><span>© 2016 Blockchain</span></small>
+</div>
+<div class="span2">
+<h4 class="collapsible__toggle">Produits</h4>
+<nav class="collapsible">
+<a href="/home">Version d'essai</a>
+<a href="https://exchange.coinbase.com">Abonnements</a>
+<a href="https://developers.coinbase.com">Plate-forme Développeur</a>
+<a href="/merchants">Outils marchand</a>
+</nav>
+</div>
+<div class="span2">
+<h4 class="collapsible__toggle">En savoir plus</h4>
+<nav class="collapsible">
+<a href="/what-is-bitcoin">Qu'est-ce que la Blockchain ?</a>
+<a href="/global">Pays pris en charge</a>
+<a href="/buy-bitcoin">Être référencé sur BlockPharma</a>
+<a href="http://status.coinbase.com">État</a>
+</nav>
+</div>
+<div class="span2">
+<h4 class="collapsible__toggle">Société</h4>
+<nav class="collapsible">
+<a href="/about">À propos de</a>
+<a href="/careers">Offres d'emploi</a>
+<a href="/press">Presse</a>
+<a href="/legal/user_agreement">Informations légales et confidentialité</a>
+</nav>
+</div>
+<div class="span2">
+<h4 class="collapsible__toggle">Social</h4>
+<nav class="collapsible">
+<a href="http://blog.coinbase.com">Blog</a>
+<a href="http://community.coinbase.com">Communauté</a>
+<a href="https://twitter.com/coinbase">Twitter</a>
+<a href="https://www.facebook.com/Coinbase">Facebook</a>
+</nav>
+</div>
+<div class="span2">
+<div class="footer-locale-select">
+<h4>Langue</h4>
+<p><select name="locale" id="locale_select"><option value="de">Deutsch</option>
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="es-mx">Español - Méjico</option>
+<option selected="selected" value="fr">Français</option>
+<option value="id">bahasa Indonesia</option>
+<option value="it">Italiano</option>
+<option value="nl">Nederlands</option>
+<option value="pt">Português</option>
+<option value="pt-br">Português - Brazil</option></select></p>
+
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="javascripts/base.js"></script>
+
+</body>
