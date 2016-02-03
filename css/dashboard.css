@@ -111,7 +111,6 @@
 .container-boite {
   height: 258px;
   width: 100%;
-  overflow: hidden;
   }
 
 .boite {
@@ -120,6 +119,7 @@
   left:0;
   height: 258px;
   width: 100%;
+  padding-bottom: 30px;
  }
 
  .modal-footer {
@@ -163,4 +163,11 @@
     padding-top: 10px;
 }
 
+.container-boite>h3 {
+    font-size: 18px !important;
+    text-align: center !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
 
